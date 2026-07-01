@@ -5,15 +5,14 @@
 // 1. Find the Largest Number in an Array
 const array1 = [12, 45, 7, 89, 23, 56, 91, 18];
 
-let largest = array1[0];
-
+let max = array1[0];
 for (let i = 1; i < array1.length; i++) {
-  if (array1[i] > largest) {
-    largest = array1[i];
+  if (array1[i] > max) {
+    max = array1[i];
   }
 }
+console.log("Largest:", max);
 
-console.log("Largest Number:", largest);
 
 // ========================================
 
@@ -21,12 +20,11 @@ console.log("Largest Number:", largest);
 const array2 = [10, 20, 30, 40, 50];
 
 let sum = 0;
-
 for (let i = 0; i < array2.length; i++) {
   sum += array2[i];
 }
-
 console.log("Sum:", sum);
+
 
 // ========================================
 
@@ -34,12 +32,11 @@ console.log("Sum:", sum);
 const text = "JavaScript";
 
 let reversed = "";
-
 for (let i = text.length - 1; i >= 0; i--) {
   reversed += text[i];
 }
+console.log("Reversed:", reversed);
 
-console.log("Reversed String:", reversed);
 
 // ========================================
 
@@ -47,27 +44,32 @@ console.log("Reversed String:", reversed);
 const sentence = "Learning JavaScript is fun";
 
 let count = 0;
-const vowels = "aeiouAEIOU";
-
 for (let i = 0; i < sentence.length; i++) {
-  if (vowels.includes(sentence[i])) {
+  let char = sentence[i].toLowerCase();
+
+  if (
+    char === "a" ||
+    char === "e" ||
+    char === "i" ||
+    char === "o" ||
+    char === "u"
+  ) {
     count++;
   }
 }
+console.log("Vowels:", count);
 
-console.log("Vowel Count:", count);
 
 // ========================================
 
 // 5. Remove Duplicate Values from an Array
 const array3 = [2, 5, 3, 2, 8, 5, 1, 8, 4, 3];
 
-let uniqueArray = [];
+let unique = [];
 
 for (let i = 0; i < array3.length; i++) {
-  if (!uniqueArray.includes(array3[i])) {
-    uniqueArray.push(array3[i]);
+  if (!unique.includes(array3[i])) {
+    unique.push(array3[i]);
   }
 }
-
-console.log("Unique Array:", uniqueArray);
+console.log("Unique:", unique);
